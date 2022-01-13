@@ -11,7 +11,7 @@ from sklearn.decomposition import PCA
 parser = argparse.ArgumentParser()
 parser.add_argument('-d','--dataset',help='Dataset',type =str,default=None,required=True)
 #parser.add_argument('-l','--label',type=str,default=None,required=True)
-parser.add_argument('-p','--pca',help="pca_n_components",type=int,default=2,required=True)
+#parser.add_argument('-p','--pca',help="pca_n_components",type=int,default=2,required=True)
 args = parser.parse_args()
 
 
@@ -40,10 +40,10 @@ s_xtest = min.transform(x_test)
 
 
 #PCA(Principal Component Analysis)
-print("Calculating Principal component analysis")
-pca = PCA(n_components=args.pca)
-p_xtrain = pca.fit_transform(s_xtrain)
-p_xtest = pca.transform(s_xtest)
+#print("Calculating Principal component analysis")
+#pca = PCA(n_components=args.pca)
+#P_xtrain = pca.fit_transform(s_xtrain)
+#p_xtest = pca.transform(s_xtest)
 
 
 cl = Classifier(train_x=s_xtrain,train_y=y_train,test_x=s_xtest,test_y=y_test)# calling class "Classifiers" from clf.py module
